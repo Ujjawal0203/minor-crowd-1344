@@ -1,28 +1,36 @@
 import React from "react";
 import { Input } from '@chakra-ui/react'
+import '../App.css'
 
 const Join = () => {
 
-  const style = {}
 
   return (
     <>
-       <div style={style}>
-        <h2>Join Fiverr</h2>
+      <div className="join_pages">
+      <div className="join_page">
+       <h1>Join Fiverr</h1>
+
+       <div className="fag" style={{backgroundColor:"blue"}}><a href="#!">Continue With Facebook</a></div>
+      <div className="fag" style={{backgroundColor:"red"}}><a href="#!">Continue with Google</a></div>
+      <div className="fag" style={{backgroundColor:"black"}}><a href="#!">Continue with Apple</a></div>
+
+
         <p>OR</p>
         
-        <div>
+        <div className="inp">
             <form>    
-                <Input type="email" id="email" placeholder="Enter your email" width='auto' required/><br/><br/>
-                <Input type="text" id="n" placeholder="Enter your name" width='auto' required/><br/><br/>
-                <Input type="password" id="pass" placeholder="Enter your password" width='auto' required/><br/><br/>
-                <Input type="submit" value="Continue" width='auto'/><br/><br/>
+                <input type="email" placeholder="Enter your email" width='auto' required/><br/>
+                <input type="password" placeholder="Enter your password" width='auto' required/><br/>
+                <input type="text" placeholder="Enter your name" width='auto' required/><br/>
+                <input id="continue" type="submit" value="Continue" width='auto'/>
             </form>
         </div>
             <p>By joining I agree to recieve emails from Fiverr</p>
         <hr/>
-        <p>Already a member?<a href="#">Sign In</a></p>
+        <p>Already a member?<a href="http://localhost:3000/signIn">Sign In</a></p>
     </div>
+      </div>
     </>
   );
 };
