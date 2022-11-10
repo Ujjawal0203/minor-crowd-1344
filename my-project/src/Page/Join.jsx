@@ -1,39 +1,33 @@
-import React from "react";
-import { Input } from '@chakra-ui/react'
-import '../App.css'
-
-const Join = () => {
+import {FormControl,Input, Container,Text} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 
-  return (
-    <>
-      <div className="join_pages">
-      <div className="join_page">
-       <h1>Join Fiverr</h1>
+export default function Join(){
+    return <div style={{backgroundColor:'#f7f7f6',height:'700px' ,paddingTop:'40px'}}>
+    <Container paddingTop='20px' backgroundColor='white' maxW='400px'>
+      <FormControl  >
+        <Text marginLeft='110px'  fontWeight='bold' fontSize='2xl'> Fiverr Join</Text>
+    <hr />
+    <Input backgroundColor='blue' color='white' marginTop='10px' type='submit' value='Continue With Facebook' fontWeight='bold' />
+    <Input backgroundColor='red' color='white' marginTop='10px' type='submit' value='Continue with Google' fontWeight='bold' />
+    <Input backgroundColor='black' color='white' marginTop='10px' type='submit' value='Continue weith Apple' fontWeight='bold' />
+    <Text marginTop='10px' marginLeft='160px'  fontSize='lg'>OR</Text>
+    <Input marginTop='10px' type='text' placeholder='Choose a Username' />
+    <Input marginTop='10px' type='email' placeholder='Choose a Email' />
+    <Input marginTop='10px' type='password' placeholder='Choose a Password' />
+    <Input backgroundColor='#005737' color='white' marginTop='10px' type='submit' value='Continue' />
+    <Text marginTop='10px' marginLeft='10px' fontSize='xs'>By signing up, you agree to our Privacy Policy, Cookie Policy and Terms of Use.</Text>
 
-       <div className="fag" style={{backgroundColor:"blue"}}><a href="#!">Continue With Facebook</a></div>
-      <div className="fag" style={{backgroundColor:"red"}}><a href="#!">Continue with Google</a></div>
-      <div className="fag" style={{backgroundColor:"black"}}><a href="#!">Continue with Apple</a></div>
+    <hr />
+      <Text margin='12px 0px' marginLeft='70px' fontSize='lg'>Have an account? <Link to='/SignIn'>Sign In</Link></Text>
+    <hr />
+  </FormControl> 
+  </Container>
+     
+       </div>
+}
 
 
-        <p>OR</p>
-        
-        <div className="inp">
-            <form>    
-                <input type="email" placeholder="Enter your email" width='auto' required/><br/>
-                <input type="password" placeholder="Enter your password" width='auto' required/><br/>
-                <input type="text" placeholder="Enter your name" width='auto' required/><br/>
-                <input id="continue" type="submit" value="Continue" width='auto'/>
-            </form>
-        </div>
-            <p>By joining I agree to recieve emails from Fiverr</p>
-        <hr/>
-        <p>Already a member?<a href="http://localhost:3000/signIn">Sign In</a></p>
-    </div>
-      </div>
-    </>
-  );
-};
 
-export default Join;
+
 
