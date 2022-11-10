@@ -1,43 +1,31 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./Navbar.css";
+import { Flex,Box , Spacer ,Text, Button} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
+export const Navbar = () => {
 
-const Navbar = () => {
-  return (
-    <div className="nav">
-      <div className="navBox">
-        <NavLink id="navlogo" className="navPage" to="/">
-          {/* <img src={logo} alt="logo" /> */}
-          UJJAWAL.
-        </NavLink>
-      </div>
-      <div className="navBox">
-        <NavLink className="navPage" to="/fiverrBusiness">
-          Fiverr Business
-        </NavLink>
-        <NavLink className="navPage" to="/explore">
-          Explore
-        </NavLink>
-        <NavLink className="navPage" to="/english">
-          English
-        </NavLink>
-        <NavLink className="navPage" to="/inr">
-          $ INR
-        </NavLink>
-        <NavLink className="navPage" to="/becomeAseller">
-          Become a Seller
-        </NavLink>
-        <NavLink className="navPage" to="/signIn">
-          Sign In
-        </NavLink>
-        <NavLink className="navPage" to="/join">
-          <button>Join</button>
-        </NavLink>
-      
-      </div>
+    return <div style={{height:'90px',padding:'10px',color:'#fff', background:"green"}}>
+    <Flex  justifyContent='space-between' alignItems='center' gap='2'>
+  <Spacer />
+  
+  <Box>
+   <Link to='/'><Text fontSize='3xl' fontWeight='bold' marginRight='50px'>Ujjawal.</Text></Link>
+   </Box>
+
+  <Box p='2' marginLeft='200px' >
+    <Flex width='900px' fontWeight='bold' justifyContent='space-around' alignItems='center' gap='2' >
+    
+         <Link to='/fiverrBusiness'><Text fontSize='lg'>Fiverr Business</Text></Link>
+         <Link to='/explore'><Text fontSize='lg'>Explore</Text></Link>
+         <Link to='/english'><Text fontSize='lg'>English</Text></Link>
+         <Link to='/inr'><Text fontSize='lg'>$ INR</Text></Link>
+         <Link to='/becomeAseller'><Text fontSize='lg'>Become a Seller</Text></Link>
+         <Link to='/signIn'><Text fontSize='lg'>Sign In</Text></Link>
+         <Link to='/join'><Button backgroundColor='red.400' color='black' >Join</Button></Link>
+        
+    </Flex>
+      </Box>
+  
+  <Spacer />
+</Flex>
     </div>
-  );
-};
-
-export default Navbar;
+}
