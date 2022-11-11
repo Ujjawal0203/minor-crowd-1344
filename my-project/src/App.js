@@ -3,7 +3,7 @@ import './App.css';
 import {Navbar} from './Components/Navbar';
 import RouterAllPage from './Components/RouterAllPage'
 import { Footer } from './Components/Footer';
-import { Home } from './Page/Home'
+
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <Navbar/>
     <RouterAllPage/>
      {/* <Footer/> */}
-     {/* <Home/> */}
+    
      
     </>
   );
