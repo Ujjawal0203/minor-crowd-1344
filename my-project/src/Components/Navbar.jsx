@@ -1,9 +1,10 @@
 import { Flex,Box , Spacer ,Text, Button} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
+
 export const Navbar = () => {
 
-    return <div style={{height:'90px',padding:'10px',color:'#fff', background:"green"}}>
+    return <div style={{height:'90px',padding:'10px',color:'#fff', background:'#60192b'}}>
     <Flex  justifyContent='space-between' alignItems='center' gap='2'>
   <Spacer />
   
@@ -20,7 +21,7 @@ export const Navbar = () => {
          <Link to='/inr'><Text fontSize='lg'>$ INR</Text></Link>
          <Link to='/becomeAseller'><Text fontSize='lg'>Become a Seller</Text></Link>
          <Link to='/signIn'><Text fontSize='lg'>Sign In</Text></Link>
-         <Link to='/join'><Button backgroundColor='red.400' color='black' >Join</Button></Link>
+         <Link to='/join'><Button border='1px solid #fff' background='#60192b' colorScheme='green' color='#fff'>Join</Button></Link>
         
     </Flex>
       </Box>
