@@ -1,4 +1,4 @@
-import {FormControl,Input, Container,Text} from '@chakra-ui/react'
+import {FormControl,Input, Container,Text, Button,chakra} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 
@@ -15,7 +15,18 @@ export default function Join(){
     <Input marginTop='10px' type='text' placeholder='Choose a Username' />
     <Input marginTop='10px' type='email' placeholder='Choose a Email' />
     <Input marginTop='10px' type='password' placeholder='Choose a Password' />
-    <Input backgroundColor='#005737' color='white' marginTop='10px' type='submit' value='Continue' />
+   <br/>
+    
+    <chakra.button
+              px="153"
+              py="2"
+              bg="#005737"
+              color='white'
+              rounded="md"
+              _hover={{ bg: "green.400" }}
+            >
+            <Link to='/SignIn' > Continue</Link>
+            </chakra.button>
     <Text marginTop='10px' marginLeft='10px' fontSize='xs'>By signing up, you agree to our Privacy Policy, Cookie Policy and Terms of Use.</Text>
 
     <hr />
