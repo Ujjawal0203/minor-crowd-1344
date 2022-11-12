@@ -1,9 +1,9 @@
-import { Box, Center, HStack, Image,Heading,Text, VStack, Flex, Divider } from "@chakra-ui/react";
+import { Box, Center, Image,Heading,Text, Flex, Divider } from "@chakra-ui/react";
 
 export const Footer = ()=>{
     return(
         <>
-        <Box bg={"black"}>
+        <Box bg={"black"} width='95%' margin='auto' >
         <Center>
         <Box bg={"black"} color="white" p={5}>
             <Flex gap={40}>
